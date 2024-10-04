@@ -5,16 +5,13 @@ WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 builder.CreateUmbracoBuilder()
     .AddBackOffice()
     .AddWebsite()
-    .AddUmbracoCommerce(builder =>
+    .AddUmbracoCommerce(commerceBuilder =>
     {
-        builder.AddSQLite();
+        commerceBuilder.AddSQLite();
     })
     .AddDeliveryApi()
     .AddComposers()
     .Build();
-
-builder.Logging.ClearProviders();
-builder.Logging.AddConsole();
 
 WebApplication app = builder.Build();
 
