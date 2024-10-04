@@ -53,5 +53,5 @@ jobs:
         with:
           app-name: 'umbraco-cms-felix'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_7377FAEB3B784DBDB9171150509372EA }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_BEBC6DCA207644F98E17F4B99409B757 }}
           package: .
