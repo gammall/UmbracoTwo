@@ -34,6 +34,8 @@
 
   <ItemGroup>
     <PackageReference Include="Umbraco.Cms" Version="14.2.0" />
+    <PackageReference Include="Umbraco.Commerce" Version="14.1.1" />
+    <PackageReference Include="Umbraco.Commerce.Persistence.Sqlite" Version="14.1.1" />
   </ItemGroup>
 
   <ItemGroup>
