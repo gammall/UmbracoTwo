@@ -13,6 +13,9 @@ builder.CreateUmbracoBuilder()
     .AddComposers()
     .Build();
 
+builder.Logging.ClearProviders();
+builder.Logging.AddConsole();
+
 WebApplication app = builder.Build();
 
 await app.BootUmbracoAsync();
