@@ -1,0 +1,45 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+    var project1 = Model?.Value<IPublishedContent>("project1")?.Url() ?? null;
+    var project2 = Model?.Value<IPublishedContent>("project2")?.Url() ?? null;
+    var project3 = Model?.Value<IPublishedContent>("project3")?.Url() ?? null;
+    var project4 = Model?.Value<IPublishedContent>("project4")?.Url() ?? null;
+}
+
+<div class="container">
+    <div class="header">
+        <h5>OUR PROJECTS</h5>
+        <h2>Recent Projects</h2>
+    </div>
+    <div class="projects">
+        <div class="card">
+            <img src="@project1">
+            <a class="title-absolute">
+                <h5>Annual report for Juva Inc</h5>
+                <p>Financial Service</p>
+            </a>
+        </div>
+        <div class="card">
+            <img src="@project2">
+            <a class="title-absolute">
+                <h5>Business Insights for SP Group Inc.</h5>
+                <p>Financial Service</p>
+            </a>
+        </div>
+        <div class="card">
+            <img src="@project3">
+            <a class="title-absolute">
+                <h5>Financial Advisors to Irra Corp Inc.</h5>
+                <p>Financial Service</p>
+            </a>
+        </div>
+        <div class="card">
+            <img src="@project4">
+            <a class="title-absolute">
+                <h5>Budget Planning for Buccura Inc.</h5>
+                <p>Financial Service</p>
+            </a>
+        </div>
+    </div>
+</div>

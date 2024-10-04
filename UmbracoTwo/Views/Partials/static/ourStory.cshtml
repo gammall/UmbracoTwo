@@ -1,0 +1,15 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+    var pageImage = Model?.Value<IPublishedContent>("pageImage")?.Url() ?? null;
+}
+    
+    <div class="container">
+        <h2 class="txt-primary">@Model.Value("header1")</h2>
+        <h2 class="txt-secondary">@Model.Value("header2")</h2>
+        <p>@Model.Value("pageDesc")</p>
+        <button class="btn-primary">Read our Story</button>
+    </div>
+    <div class="image">
+        <img src="@pageImage">
+    </div>

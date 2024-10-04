@@ -1,0 +1,36 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockGridItem>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@using Umbraco.Cms.Core.PropertyEditors.ValueConverters;
+@using UmbracoTwo.Controller
+@using UmbracoTwo.Models
+
+
+@{
+
+}
+<div class="form1">
+    <div>    
+        <h3>Request a call back</h3>
+    </div>
+    <p>Lorem ipsum fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</p>
+    
+        @using (Html.BeginUmbracoForm<ContactFormController>(nameof(ContactFormController.HandleSubmit)))
+    {
+        <form>
+            <input id="name" name="name" type="text" placeholder="Name" value="@TempData["name"]">
+            <input id="email" name="email" type="email" placeholder="Email Address" value="@TempData["email"]">
+            <input id="phone" name="phone" type="number" placeholder="Phone Number" value="@TempData["phone"]">
+            <select>
+                <option value="Risk">Risk Management</option>
+                <option value="Bonds">Bonds & Commodities</option>
+                <option value="Assurance">Assurance & Audits</option>
+                <option value="Tax">Tax and Trusts</option>
+                <option value="Financial">Financial Advisor</option>
+                <option value="Statistic">Statistic Advisors</option>
+            </select>
+            <button type="submit" name="Submit" value="Submit" class="btn-secondary">Submit</button>
+        </form>
+        }
+
+</div>

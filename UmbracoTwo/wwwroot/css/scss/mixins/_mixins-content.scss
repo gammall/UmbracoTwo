@@ -1,0 +1,63 @@
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin center-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin text-center {
+    text-align: center;
+}
+
+@mixin spacing-top {
+    margin-top: 1rem;
+}
+
+@mixin spacing-bottom {
+    margin-bottom: 1rem;
+}
+
+@mixin background-absolute {
+    position: absolute;
+    z-index: -1;
+}
+
+@mixin absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.center {
+    @include center;
+}
+
+.textcenter {
+    @include text-center;
+}
+
+.center-column {
+    @include center-column;
+}
+
+.spacing-top {
+    @include spacing-top;
+}
+
+.spacing-bottom {
+    @include spacing-bottom;
+}
+
+.background {
+    @include background-absolute;
+}
+
+.bg-absolute {
+    @include absolute;
+}

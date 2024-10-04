@@ -1,0 +1,20 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockGridItem>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@using Umbraco.Cms.Core.PropertyEditors.ValueConverters;
+
+@{
+    var textInput = Model?.Content.Value("textInput");
+
+    var textUrl = Model?.Content.Value<IPublishedContent>("textUrl")?.Url() ?? null;
+
+    var buttonColorLabel = Model?.Content.Value<ColorPickerValueConverter.PickedColor>("buttonColor")?.Label.ToLower() ?? null;
+    var buttonColor = (!string.IsNullOrEmpty(buttonColorLabel) && buttonColorLabel != "none") ? $"btn-{buttonColorLabel}" : "";
+
+    var mt = (Model!.Content.Value<bool>("marginTop")) ? "mt-10" : "";
+    var mb = (Model!.Content.Value<bool>("marginBottom")) ? "mb-10" : "";
+}
+
+<a href="@textUrl" class="@buttonColor @mt @mb">
+@textInput
+</a>

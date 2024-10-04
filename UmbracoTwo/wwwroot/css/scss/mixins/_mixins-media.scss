@@ -1,0 +1,60 @@
+@mixin x-small {
+    @media (max-width: 1195px) {
+        @content;
+    }
+}
+
+@mixin small {
+    @media (max-width: 1302px) {
+        @content;
+        }
+}
+
+@mixin medium {
+    @media (max-width: 1520px) {
+        @content;
+    }
+}
+
+@mixin large {
+    @media (max-width: 1740px) {
+        @content;
+    }
+}
+
+@mixin x-large {
+    @media (min-width: 2067px) {
+        @content;
+    }
+}
+
+html {
+    @include x-large {
+        font-size: 18px;
+    }
+
+    @include large {
+        font-size: 14px;
+    }
+
+    @include medium {
+        font-size: 12px;
+    }
+
+    @include small {
+        font-size: 11px;
+    }
+
+    @include x-small {
+        font-size: 10px;
+    }
+}
+
+section {
+    height: 100%;
+    position: relative;
+}
+
+.section-background-image {
+    width: 100%; 
+}

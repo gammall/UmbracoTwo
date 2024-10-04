@@ -1,0 +1,7 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+var partnerImage = Model?.Value<IPublishedContent>("partnerImage")?.Url() ?? null;
+}
+
+<img src="@partnerImage">

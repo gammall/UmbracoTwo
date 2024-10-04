@@ -1,0 +1,113 @@
+.about-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.about-page .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 100vh;
+}
+
+.about-page .container .right {
+    width: 45rem;
+    margin-left: 7rem;
+}
+
+.about-page .container .left p {
+    margin-top: 1rem;
+    font-size: 1rem;
+}
+
+.about-page .review {
+    width: 100%;
+    height: auto;
+    background-color: $gray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-page .review .left {
+    width: 100%;
+    height: auto;
+    margin-left: 18%;
+}
+
+.about-page .review .left h5 {
+    color: $secondary;
+}
+
+.about-page .review .left h2 {
+    margin-bottom: 1rem;
+}
+
+.about-page .review .left .stars {
+    margin: 1rem 0 1rem 0;
+}
+
+.about-page .our-experts {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 5rem;
+}
+
+.about-page .our-experts .header {
+    text-align: center;
+}
+
+.about-page .our-experts .header h5 {
+    color: $secondary;
+}
+
+.about-page .our-experts .experts {
+    height: auto;
+    display: flex;
+    margin-top: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-page .our-experts .experts .card {
+    border: 1px solid lighten(black, 70%);
+    width: fit-content;
+    margin: 1rem;
+}
+
+.about-page .our-experts .experts .card div {
+    padding: 1rem;
+}
+
+.about-page .our-experts .experts2 {
+    width: 70%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.about-page .our-experts .experts2 .card {
+    border: 1px solid lighten(black, 70%);
+    width: fit-content;
+    margin: 1rem;
+}
+
+.about-page .our-experts .experts2 .card div {
+    padding: 1rem;
+    width: auto;
+}
+
+.about-page .our-experts .experts2 .card img {
+    object-fit: cover;
+    width: 280px;
+    height: 250px;
+}

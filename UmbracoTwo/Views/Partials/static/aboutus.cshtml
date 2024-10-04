@@ -1,0 +1,30 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@inject Umbraco.Cms.Web.Common.UmbracoHelper UmbracoHelper
+@using Umbraco.Cms.Core
+@using Umbraco.Cms.Core.Models.PublishedContent
+@using Umbraco.Cms.Core.Routing
+@using Umbraco.Extensions
+@inject IPublishedValueFallback PublishedValueFallback
+@inject IPublishedUrlProvider PublishedUrlProvider
+@{
+    var rootContent = UmbracoHelper.ContentAtRoot();
+    var settings = rootContent?.FirstOrDefault(x => x.ContentType.Alias == "settingsPage") ?? null;
+    var image = settings?.Value<IPublishedContent>("contentImage")?.Url() ?? null;
+
+}
+
+	<div class="left">
+        <div class="top">		
+            <h3>About us</h3>
+            <img src="@image">
+            <p>Dolor in reprehenderit in voluptate velit esse cillum </p>
+	    </div>
+        <div class="bottom">
+            <h4>How can we help you?</h4>
+            <p>online support 24/7, we are here to help you</p>
+            <div>
+                <input type="email" placeholder="E-mail address"><i class="fa-regular fa-envelope"></i>
+            </div>
+        </div>
+    </div>

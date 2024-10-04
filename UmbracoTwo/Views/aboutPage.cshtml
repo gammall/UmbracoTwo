@@ -1,0 +1,102 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+	Layout = "mainLayout.cshtml";
+	ViewBag.Title = Model?.Value("pageTitle") ?? null;
+
+	var pageInfo = @Model.Value("pageInfo");
+	var pageImage = ((IPublishedContent)Model.Value("pageImage")).Url();
+	var containerImage = ((IPublishedContent)Model.Value("containerImage")).Url();
+	var expertImage1 = ((IPublishedContent)Model.Value("expert1")).Url();
+	var expertImage2 = ((IPublishedContent)Model.Value("expert2")).Url();
+	var expertImage3 = ((IPublishedContent)Model.Value("expert3")).Url();
+}
+
+<section class="about-page">
+	<div class="container">
+		<div class="left">
+			<img src="@pageImage">
+			<p>Tina Fox - CEO & Founder at Onatrix</p>
+		</div>
+		<div class="right">
+			<p>@pageInfo</p>
+		</div>
+	</div>
+	<div class="review">
+		<div class="left">
+			<h5>GREAT REVIEWS FOR OUR SERVICES</h5>
+			<h2>Trusted by some of the biggest names</h2>
+			<p>Seamlessly visualize quality intellectual capital without superior collaboration and idea-sharing. Holistically pontificate installed base portals.</p>
+			<div class="stars">
+				<i class="fa-solid fa-star"></i>
+				<i class="fa-solid fa-star"></i>
+				<i class="fa-solid fa-star"></i>
+				<i class="fa-solid fa-star"></i>
+				<i class="fa-solid fa-star"></i>
+			</div>
+			<p>Kevin Gardner</p>
+			<p>Swedbank</p>
+		</div>
+		<img src="@containerImage">
+	</div>
+	<div class="our-experts">
+		<div class="header">
+			<h5>OUR EXPERTS</h5>
+			<h2>A team of professionals with years of experience</h2>
+		</div>
+		<div class="experts">
+			<div class="card">
+				<img src="@expertImage1">
+				<div>
+					<h3>Brandon Newton</h3>
+					<p>Financial Advisor at Onatrix</p>
+				</div>
+			</div>
+			<div class="card">
+				<img src="@expertImage2">
+				<div>
+					<h3>AJ Carter</h3>
+					<p>Financial Advisor at Onatrix</p>
+				</div>
+			</div>
+			<div class="card">
+				<img src="@expertImage3">
+				<div>
+					<h3>Aaron Lambert</h3>
+					<p>Financial Advisor at Onatrix</p>
+				</div>
+			</div>
+		</div>
+		<div class="experts2">
+			<div class="card">
+				<img src="@pageImage">
+				<div>
+					<h3>Tina Fox</h3>
+					<p>CEO & Founder</p>
+				</div>
+			</div>
+						<div class="card">
+				<img src="@expertImage3">
+				<div>
+					<h3>Tina Fox</h3>
+					<p>CEO & Founder</p>
+				</div>
+			</div>
+						<div class="card">
+				<img src="@expertImage1">
+				<div>
+					<h3>Tina Fox</h3>
+					<p>CEO & Founder</p>
+				</div>
+			</div>
+						<div class="card">
+				<img src="@expertImage2">
+				<div>
+					<h3>Tina Fox</h3>
+					<p>CEO & Founder</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+	@await Html.PartialAsync("partials/static/contactInfo.cshtml")

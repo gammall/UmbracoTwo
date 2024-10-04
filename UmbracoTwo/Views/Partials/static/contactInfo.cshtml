@@ -1,0 +1,50 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@inject Umbraco.Cms.Web.Common.UmbracoHelper UmbracoHelper
+@using Umbraco.Cms.Core
+@using Umbraco.Cms.Core.Models.PublishedContent
+@using Umbraco.Cms.Core.Routing
+@using Umbraco.Extensions
+@inject IPublishedValueFallback PublishedValueFallback
+@inject IPublishedUrlProvider PublishedUrlProvider
+@{
+    var rootContent = UmbracoHelper.ContentAtRoot();
+    var settings = rootContent?.FirstOrDefault(x => x.ContentType.Alias == "settingsPage") ?? null;
+    var image = settings?.Value<IPublishedContent>("contactUsImage")?.Url() ?? null;
+
+    
+}
+
+<section class="contact-info">
+    <div class="container">
+        <img src="@image">
+        <div class="right">
+            <h2>Let us know about your next project</h2>
+
+            <div>
+                <div>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <h5>Office location</h5>
+                </div>
+                <p>Klarabergsviadukten 90, 111 52 Stockholm</p>
+            </div>
+
+            <div>
+                <div>
+                    <i class="fa-solid fa-phone-flip"></i>
+                    <h5>Phone number</h5>
+                </div>
+                <p>+46 8 123 456 75</p>
+            </div>
+
+            <div>
+                <div>
+                    <i class="fa-solid fa-envelope"></i>
+                    <h5>E-mail address</h5>
+                </div>
+                <p>sales@onatrix.com</p>
+            </div>
+
+        </div>
+    </div>
+</section>

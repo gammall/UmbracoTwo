@@ -1,0 +1,35 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+	var selection = Umbraco.Content(Guid.Parse("f7622268-4c92-44f2-b2a9-7ddad2c5cd52"))
+    .ChildrenOfType("serviceItemTemplate")
+    .Where(x => x.IsVisible())
+	.Take(6);
+}
+
+		<div class="headline">
+			<h2 class="title">We Provide The Solutions
+			To Grow Your Business Faster</h2>
+		</div>
+		<div class="services">
+			@foreach (var item in selection) {
+				var image = item?.Value<IPublishedContent>("thumbnail")?.Url() ?? null;
+				var pageDesc = item?.Value<string>("pageDesc") ?? "";
+
+			<a href="@item.Url()">
+				<div class="item">
+					<div class="header">
+						<h4>@item.Name()</h4>
+					</div>
+					<div class="body">
+						<img src="@image" alt="@item.Name()">
+					</div>
+					<div class="footer">
+						<p>@pageDesc</p>
+					</div>
+				</div>
+			</a>
+			}
+		</div>
+
+

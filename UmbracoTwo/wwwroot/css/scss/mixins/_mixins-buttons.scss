@@ -1,0 +1,37 @@
+@import '../colors/_colors.scss';
+
+@mixin button-color($bg-color, $txt-color, $hover-bg-color, $hover-txt-color) { // EX: a { button-color($primary, $sub1, darken($primary, 10%), $sub1)}
+    background-color: $bg-color;
+    color: $txt-color;
+
+    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    outline: none !important;
+
+    &:hover {
+        background-color: $hover-bg-color;
+        color: $hover-txt-color;
+    }
+    &:hover, &:focus, &:active {
+        outline: none !important;
+    }
+}
+
+
+@mixin btn {
+    display: inline-block;
+    cursor:pointer;
+    border-radius: 3px;
+    border: none;
+    padding: 0.9375rem 3.125rem;
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    transition: 0.25s;
+    text-decoration: none !important;
+
+    &:hover {
+        transition: 0.25s;
+        text-decoration: none;
+    }
+}

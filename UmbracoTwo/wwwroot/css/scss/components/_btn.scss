@@ -1,0 +1,11 @@
+@import '../mixins/_mixins-buttons.scss';
+
+.btn-primary {
+    @include btn;
+    @include button-color($primary, $light, darken($primary, 10%), $light);
+}
+.btn-secondary {
+    @include btn;
+    @include button-color($secondary, $primary, darken($secondary, 10%), $primary);
+}
+

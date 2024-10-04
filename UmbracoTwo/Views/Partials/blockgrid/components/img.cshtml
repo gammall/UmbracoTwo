@@ -1,0 +1,10 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockGridItem>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+
+@{
+    var imgUrl = Model?.Content.Value<IPublishedContent>("selectedImg")?.Url() ?? null;
+    var positionAbsolute = (Model!.Content.Value<bool>("positionAbsolute")) ? "absolute" : ""; 
+}
+
+<img src="@imgUrl" class="@positionAbsolute">

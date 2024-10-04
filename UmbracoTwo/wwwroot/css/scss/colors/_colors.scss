@@ -1,0 +1,54 @@
+$dark: #171717;
+$primary: #4F5955;
+$secondary: #D9C3A9;
+$accent: #F2EDDC;
+$gray: #F7F7F7;
+$light: #FFFFFF;
+
+.bg-dark {
+    background-color: $dark;
+}
+
+.bg-primary {
+    background-color: $primary;
+}
+
+.bg-secondary {
+    background-color: $secondary;
+}
+
+.bg-accent {
+    background-color: $accent;
+}
+
+.bg-gray {
+    background-color: $gray;
+}
+
+.bg-light {
+    background-color: $light;
+}
+
+.txt-dark {
+    color: $dark;
+}
+
+.txt-primary {
+    color: $primary;
+}
+
+.txt-secondary {
+    color: $secondary;
+}
+
+.txt-accent {
+    color: $accent;
+}
+
+.txt-gray {
+    color: $gray;
+}
+
+.txt-light {
+    color: $light;
+}

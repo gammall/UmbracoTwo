@@ -1,0 +1,15 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockGridItem>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@using Umbraco.Cms.Core.PropertyEditors.ValueConverters;
+
+@{
+    var textInput = Model?.Content.Value("textInput");
+    
+    var textColorLabel = Model?.Content.Value<ColorPickerValueConverter.PickedColor>("textColor")?.Label.ToLower() ?? null;
+    var textColor = (!string.IsNullOrEmpty(textColorLabel) && textColorLabel != "none") ? $"txt-{textColorLabel}" : "";
+}
+
+<h6 class="@textColor">
+@textInput
+</h6>

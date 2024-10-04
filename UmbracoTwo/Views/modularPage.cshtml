@@ -1,0 +1,62 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.ModularPage>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@using UmbracoTwo.Controller
+
+@{
+	Layout = "mainLayout.cshtml";
+	ViewBag.Title = Model?.Value("pageTitle") ?? null;
+
+}
+
+@await Html.GetBlockGridHtmlAsync(Model!.Layout);
+
+
+<div class="form1">
+    <div class="header">
+        <h3>Request a call back</h3>
+    </div>
+    <p>Lorem ipsum fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</p>
+
+    @using (Html.BeginUmbracoForm<ContactFormController>(nameof(ContactFormController.HandleSubmit)))
+    {
+        <div id="form">
+            <input id="name" name="name" type="text" placeholder="Name" value="@TempData["name"]">
+            <input id="email" name="email" type="email" placeholder="Email Address" value="@TempData["email"]">
+            <input id="phone" name="phone" type="number" placeholder="Phone Number" value="@TempData["phone"]">
+            <select>
+                <option value="Risk">Risk Management</option>
+                <option value="Bonds">Bonds & Commodities</option>
+                <option value="Assurance">Assurance & Audits</option>
+                <option value="Tax">Tax and Trusts</option>
+                <option value="Financial">Financial Advisor</option>
+                <option value="Statistic">Statistic Advisors</option>
+            </select>
+            <button type="submit" name="Submit" value="Submit" class="btn-secondary">Submit</button>
+        </div>
+    }
+
+</div>
+
+
+<section id="our-services" class="bg-gray">
+	<div class="container">
+		<h5 class="mt-10 txt-secondary">@Model.Value("sectionTitle")</h5>
+	@await Html.PartialAsync("partials/static/ourServices.cshtml")
+	</div>
+</section>
+
+<section class="our-story">
+	@await Html.PartialAsync("partials/static/ourStory.cshtml")
+</section>
+<section class="success-story bg-primary">
+    @await Html.PartialAsync("partials/static/successStory.cshtml")
+</section>
+<section class="recent-projects">
+    @await Html.PartialAsync("partials/static/recentProjects.cshtml")
+</section>
+<section class="partners">
+    <div class="container">
+        @await Html.PartialAsync("partials/static/partners.cshtml")
+    </div>
+</section>

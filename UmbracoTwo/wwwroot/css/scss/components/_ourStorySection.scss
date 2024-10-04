@@ -1,0 +1,139 @@
+.our-story {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    padding-top: 8rem;
+}
+
+.our-story .container {
+    text-align: center;
+}
+
+.our-story .container p {
+    width: 40rem;
+}
+
+.our-story .container button {
+    margin-top: 3rem;
+}
+
+.our-story .image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.our-story .image img {
+    width: 60%;
+}
+
+.success-story {
+    width: 100%;
+    height: 80vh;
+}
+
+.success-story .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.success-story .container .header {
+    text-align: center;
+    margin-top: 6rem;
+}
+
+.success-story .container .header h5 {
+    color: $secondary;
+}
+
+.success-story .container .header h2 {
+    color: white;
+}
+
+.success-story .container .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-top: 4rem;
+}
+
+.success-story .container .title div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 22rem;
+    margin: 0 1rem 0 1rem;
+    text-align: center;
+}
+
+.success-story .container .title div h6 {
+    color: $secondary;
+    margin: 0;
+    font-weight: 600;
+}
+
+.recent-projects {
+    width: 100%;
+    height: 80vh;
+    background-color: white;
+}
+
+
+.recent-projects .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.recent-projects .container .header {
+    margin: 0 0 3rem 20rem;
+}
+
+.recent-projects .container .header h5 {
+    color: $secondary;
+}
+
+.recent-projects .container .projects {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+
+.recent-projects .container .projects .card {
+    position: relative;
+}
+
+.recent-projects .container .projects .card .title-absolute {
+    background-color: rgba($primary, 0.5);
+    color: white;
+    width: 100%;
+    height: 6rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.recent-projects .container .projects .card .title-absolute {
+    padding: 2rem;
+}
+
+.recent-projects .container .projects .card .title-absolute h5 {
+    font-size: 1.1rem;
+}
+
+.recent-projects .container .projects .card .title-absolute:hover {
+    background-color: $primary;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+}

@@ -1,0 +1,190 @@
+#our-services {
+    width: 100%;
+    height: 100vh;
+}
+
+#breadcrumb {
+    width: 100%;
+    height: 245px;
+}
+
+#breadcrumb div {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: $gray;
+}
+
+#breadcrumb div h2 {
+    margin: 0;
+    padding: 0;
+}
+
+.breadcrumb {
+    font-size: 1rem;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-weight: 500;
+    text-align: center;
+    display: flex;
+    font-family: "Poppins", sans-serif;
+}
+
+.breadcrumb li + li:before {
+    content: ">";
+    margin: 0 10px;
+}
+
+.breadcrumb li a {
+    text-decoration: none;
+    color: $secondary;
+}
+
+.breadcrumb li a:hover {
+    text-decoration: underline;
+}
+
+.service-item {
+    display: flex;
+    padding: 50px 300px 50px 300px;
+    width: 100%;
+    height: 100vh;
+}
+
+.left {
+    width: 25%;
+    border-right: 1px solid $gray;
+    margin: 0 3rem 0 0;
+    padding: 0 3rem 0 0;
+}
+
+.left .top img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.left .bottom {
+    width: 100%;
+    height: 223px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+    background-color: $primary;
+    color: $accent;
+    justify-content: space-around;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    position: relative;
+}
+
+.left .bottom h3 {
+    font-size: 1.3rem;
+}
+
+.left .bottom input {
+    width: 100%;
+    height: 3rem;
+}
+
+.left .bottom i {
+    position: absolute;
+    right: 2rem;
+    bottom: 2.6rem;
+    color: lighten($primary, 20%);
+    font-size: 1.2rem;
+}
+
+
+.right {
+    width: 75%;
+}
+
+.right img {
+    width: 100%;
+    height: 100%;
+}
+
+
+#our-services {
+    width: 100%;
+    height: 100%;
+}
+
+#our-services .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.headline {
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+}
+
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    margin-bottom: 3rem;
+}
+
+.services a .body img {
+    width: 100%;
+    height: auto;
+    transition: all 0.2s ease-in-out;
+}
+
+.services a .body img:hover {
+    transform: scale(1.04);
+}
+
+.services a {
+    background-color: white;
+    width: 22rem;
+    border: 0.1rem solid lighten(black, 90%);
+    text-decoration: none;
+    border-radius: 0.3rem;
+    color: $primary;
+    margin: 1.5rem;
+    overflow: hidden;
+}
+
+.services a .item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.services a .item .header {
+    padding: 1rem;
+}
+
+.services a .item .footer {
+    padding: 1rem;
+}
+
+.partners {
+    width: 100%;
+    height: auto;
+}
+
+.partners .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 4rem;
+}
